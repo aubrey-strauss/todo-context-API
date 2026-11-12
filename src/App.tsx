@@ -1,8 +1,10 @@
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
+import { useTodos } from "./context/TodoContext";
 
 // App = the page's outer frame
 function App() {
+  const { clearCompleted } = useTodos();
   return (
     <div className="app">
       <h1>Todo App</h1>
@@ -10,7 +12,7 @@ function App() {
       <TodoInput /> {/* text box + Add button */}
       <p>[filter buttons go here]</p>
       <TodoList /> {/* shows all the todos */}
-      <p>[clear completed button goes here]</p>
+      <button onClick={clearCompleted}>Clear completed</button>
     </div>
   );
 }
