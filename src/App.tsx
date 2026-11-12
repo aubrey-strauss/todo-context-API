@@ -1,6 +1,7 @@
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 import { useTodos } from "./context/TodoContext";
+import FilterButtons from "./components/FilterButtons";
 
 // App = the page's outer frame
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <h1>Todo App</h1>
       <p>[theme button goes here]</p>
       <TodoInput /> {/* text box + Add button */}
-      <p>[filter buttons go here]</p>
+      <FilterButtons />
       <TodoList /> {/* shows all the todos */}
       <button onClick={clearCompleted}>Clear completed</button>
     </div>
