@@ -1,6 +1,7 @@
-import TodoInput from "./components/TodoInput"; // bring in my input box component
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
-// App = the page's outer frame; each placeholder gets swapped for a real component as I build it
+// App = the page's outer frame
 function App() {
   return (
     <div className="app">
@@ -8,7 +9,7 @@ function App() {
       <p>[theme button goes here]</p>
       <TodoInput /> {/* text box + Add button */}
       <p>[filter buttons go here]</p>
-      <p>[todo list goes here]</p>
+      <TodoList /> {/* shows all the todos */}
       <p>[clear completed button goes here]</p>
     </div>
   );
